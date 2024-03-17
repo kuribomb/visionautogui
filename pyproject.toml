@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "VisionAutoGui"
+version = "0.0.1"
+authors = [{ name = "kuriboh", email = "example@aaa.jp" }]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["pyautogui", "opencv-python"]
+
+[project.urls]
+Homepage = "https://github.com/kuribomb/visionautogui"
+Issues = "https://github.com/kuribomb/visionautogui/issues"
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 88
+exclude = [".venv"]
+select = ["C", "E", "F", "W", "B", "BLK"]
+ignore = ["E302", "E203", "W503", "W504", "W293", "E402"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[project.optional-dependencies]
+dev = ["pytest", "injector", "twine"]

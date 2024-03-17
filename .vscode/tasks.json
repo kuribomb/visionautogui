@@ -1,0 +1,14 @@
+{
+    "tasks": [
+        {
+            "label": "upload testpypi",
+            "type": "shell",
+            "command": "py -m pip install --upgrade twine && py -m twine upload --repository testpypi dist/*"
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "py -m build"
+        }
+    ]
+}
